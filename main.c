@@ -1,54 +1,30 @@
 /*
- * Traffic_control_lights.c
+ * Traffic Control.c
  *
- * Created: 8/20/2023 10:36:53 AM
- * Author : DELL
+ * Created: 8/20/2023 9:44:44 AM
+ * Author : Lenovo
  */ 
-#include "DIO.h"
-#include "LCD.h"
-#include "interrupts.h"
-#include "LED.h"
 
-EXTi_INTERRUPTconfiguration *external_interrupt_config;
+#include "APP.h"
+
+uint8_t state = green_state;
+uint8_t *LCD_Data = "Cars"; 
 
 int main(void)
 {
-	external_interrupt_config->EXTI_source = EX_INT1;
-	external_interrupt_config->EXTI_trigger = FALLING_EDGE;
-	external_interrupt_config->IRQ_en = GLOBAL_INT1_EN;
-	external_interrupt_config->Flag_clear = GLOBAL_INT1_FLAG;
 	
-	LCD_init();
+	LED_init();
+	LCD_Init();
 	LCD_Clear();
-	
-		DIO_setPinDirection(DIO_PORTA, DIO_PIN4, PIN_OUTPUT);
-		DIO_setPinDirection(DIO_PORTA, DIO_PIN5, PIN_OUTPUT);
-		DIO_setPinDirection(DIO_PORTA, DIO_PIN6, PIN_OUTPUT);
-		DIO_setPinDirection(DIO_PORTB, DIO_PIN7, PIN_OUTPUT);
-		
-		EXTI_interruptconfig(external_interrupt_config);
+	state = green_state;
 
-    /* Replace with your application code */
+	
+	PedestrianButton_init();
+	//LCD_moveCursor(1, 0);
+	
     while (1) 
     {
-    }
+		Traffic_state(&state);
+	}
 }
 
-ISR(INT1_vect)
-{
-	LCD_Clear();
-	LED_init();
-	_delay_ms(150);
-	const uint8_t *str = "aaaaaa";
-	LCD_WriteString(str);
-	
-	RED_LED(ON);
-	_delay_ms(150);
-	BLUE_LED(ON);
-	_delay_ms(150);
-	PORTA ^= (1<<4);
-	_delay_ms(150);
-	PORTA ^= (1<<5);
-	_delay_ms(150);
-	SetBit(GIFR, external_interrupt_config->Flag_clear);
-}

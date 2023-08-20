@@ -127,6 +127,21 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="APP\APP.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\APP.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\BUTTON\Button.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\BUTTON\Button.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\BUTTON\Button_Config.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="HAL\LCD\LCD.c">
       <SubType>compile</SubType>
     </Compile>

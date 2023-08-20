@@ -46,6 +46,8 @@ SUBDIRS :=  \
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
+../APP/APP.c \
+../HAL/BUTTON/Button.c \
 ../HAL/LCD/LCD.c \
 ../HAL/LED/LED.c \
 ../main.c \
@@ -60,6 +62,8 @@ ASM_SRCS +=
 
 
 OBJS +=  \
+APP/APP.o \
+HAL/BUTTON/Button.o \
 HAL/LCD/LCD.o \
 HAL/LED/LED.o \
 main.o \
@@ -67,6 +71,8 @@ MCAL/DIO/DIO.o \
 MCAL/EXTI/interrupts.o
 
 OBJS_AS_ARGS +=  \
+APP/APP.o \
+HAL/BUTTON/Button.o \
 HAL/LCD/LCD.o \
 HAL/LED/LED.o \
 main.o \
@@ -74,6 +80,8 @@ MCAL/DIO/DIO.o \
 MCAL/EXTI/interrupts.o
 
 C_DEPS +=  \
+APP/APP.d \
+HAL/BUTTON/Button.d \
 HAL/LCD/LCD.d \
 HAL/LED/LED.d \
 main.d \
@@ -81,6 +89,8 @@ MCAL/DIO/DIO.d \
 MCAL/EXTI/interrupts.d
 
 C_DEPS_AS_ARGS +=  \
+APP/APP.d \
+HAL/BUTTON/Button.d \
 HAL/LCD/LCD.d \
 HAL/LED/LED.d \
 main.d \
@@ -101,6 +111,20 @@ LINKER_SCRIPT_DEP+=
 
 
 # AVR32/GNU C Compiler
+APP/APP.o: ../APP/APP.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)D:\EME_Embedded_EUI\IDEs\Atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\EME_Embedded_EUI\IDEs\Atmel\7.0\Packs\atmel\ATmega_DFP\1.7.374\include" -I"../MCAL/DIO" -I"../LIBRARY" -I"../HAL/LCD" -I"../MCAL/EXTI" -I"../HAL/BUTTON" -I"../HAL/LED" -I"../APP"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "D:\EME_Embedded_EUI\IDEs\Atmel\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+HAL/BUTTON/Button.o: ../HAL/BUTTON/Button.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)D:\EME_Embedded_EUI\IDEs\Atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\EME_Embedded_EUI\IDEs\Atmel\7.0\Packs\atmel\ATmega_DFP\1.7.374\include" -I"../MCAL/DIO" -I"../LIBRARY" -I"../HAL/LCD" -I"../MCAL/EXTI" -I"../HAL/BUTTON" -I"../HAL/LED" -I"../APP"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "D:\EME_Embedded_EUI\IDEs\Atmel\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
 HAL/LCD/LCD.o: ../HAL/LCD/LCD.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0

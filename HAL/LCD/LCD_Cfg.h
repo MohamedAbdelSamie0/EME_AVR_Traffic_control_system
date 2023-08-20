@@ -1,46 +1,41 @@
 /*
  * LCD_Cfg.h
  *
- * Created: 8/18/2023 10:18:19 AM
- *  Author: Mohamed Abdelsamie
+ * Created: 18-Aug-23 10:22:36 AM
+ *  Author: Salma
  */ 
 
 
 #ifndef LCD_CFG_H_
 #define LCD_CFG_H_
 
-/*******************************************************************************
- *                                Definitions                                  *
- *******************************************************************************/
+#include "DIO.h"
 
-/* LCD HW Ports and Pins Ids */
-#define LCD_4BIT_CMD_PORT_ID			DIO_PORTA
-#define LCD_4BIT_DATA_PORT_ID			DIO_PORTB
+#define LCD_MODE	4
 
-#define LCD_8BIT_CMD_PORT_ID			DIO_PORTA
-#define LCD_8BIT_DATA_PORT_ID			DIO_PORTB
+ /*
+    Sets interface data length (DL), number of display lines (N), and character font (F).
+    DL = 1: 8 bits, DL = 0: 4 bits
+    N = 1: 2 lines, N = 0: 1 line
+    F = 1: 5 × 10 dots, F = 0: 5 × 8 dots
+*/
+#define FUNCTION_SET			   0x28
+#define CLEAR_DISPLAY			   0x01
+#define DISPLAY_ON_CURSOR_BLINKING 0x0F
 
-#define LCD_RS_PIN_ID					DIO_PIN3
-#define LCD_E_PIN_ID					DIO_PIN2
-#define LCD_RW_PIN_ID					DIO_PIN1
 
-#define LCD_D4							DIO_PIN0
-#define LCD_D5							DIO_PIN1
-#define LCD_D6							DIO_PIN2
-#define LCD_D7							DIO_PIN4
+#define LCD_4BIT_CMD_PORT	 DIO_PORTA  
+#define LCD_4BIT_DATA_PORT	 DIO_PORTB  
 
-/* LCD Commands */
-#define LCD_CLEAR_COMMAND				0x01
-#define LCD_GO_TO_HOME					0x02
-#define LCD_TWO_LINES_8_BITS_MODE		0x38
-#define LCD_TWO_LINES_4_BITS_MODE		0x28
-#define LCD_CURSOR_OFF					0x0C
-#define LCD_CURSOR_ON					0x0E
-#define LCD_CURSOR_ON_BLINK				0x0F
-#define LCD_SET_CURSOR_LOCATION			0x80
-
-/*	LCD_MODE	*/
-#define LCD_MODE						4
+#define  LCD_RS_PIN		DIO_PIN3
+#define  LCD_RW_PIN     DIO_PIN1
+#define  LCD_EN_PIN		DIO_PIN2
+    
+#define LCD_D4		DIO_PIN0
+#define LCD_D5		DIO_PIN1
+#define LCD_D6		DIO_PIN2
+#define LCD_D7      DIO_PIN4
+    
 
 
 #endif /* LCD_CFG_H_ */

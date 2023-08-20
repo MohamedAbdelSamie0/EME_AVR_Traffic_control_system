@@ -1,4 +1,4 @@
-main.d main.o: .././main.c ../APP/APP.h ../HAL/BUTTON/Button.h \
+APP/APP.d APP/APP.o: ../APP/APP.c ../APP/APP.h ../HAL/BUTTON/Button.h \
  ../HAL/BUTTON/Button_Config.h \
  d:\eme_embedded_eui\ides\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay.h \
  d:\eme_embedded_eui\ides\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\inttypes.h \
