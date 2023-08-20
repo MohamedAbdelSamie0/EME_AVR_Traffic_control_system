@@ -12,6 +12,7 @@
 #include <avr/interrupt.h>
 
 EXTi_INTERRUPTconfiguration *EXTI_Config;
+
 extern uint8_t g_BREAK_DELAY;
 extern uint8_t state;
 
@@ -36,7 +37,7 @@ ISR(INT1_vect){
 		GREEN_LED(OFF);
 		YellowBlink();
 		LCD_Clear();
-		LCD_WriteString("	PEDESTRIAN");
+		LCD_WriteString((uint8_t*)"PEDESTRIAN");
 		BLUE_LED(ON);
 		RED_LED(ON);
 		_delay_ms(5000);
@@ -45,15 +46,18 @@ ISR(INT1_vect){
 		break;
 		
 		case red_state:
-		
+	
 		state = green_state;
+		LCD_Clear();
+		LCD_WriteString((uint8_t*)"PEDESTRIAN");
 		BLUE_LED(ON);
 		_delay_ms(5000);
 		break;
 	}
-	
-		g_BREAK_DELAY = 0;
+	LCD_Clear();
+	g_BREAK_DELAY = 0;
 		
+	/*	clear interrupt flah	*/
 	SetBit(GIFR, EXTI_Config->Flag_clear);
 	
 }

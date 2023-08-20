@@ -15,7 +15,7 @@
 void LCD_Init(void);
 void LCD_WriteCommand (uint8_t cmd);
 
-void LCD_WriteChar (uint8_t chr);
+void LCD_WriteChar(uint8_t chr);
 void LCD_WriteString(uint8_t* str);
 
 void LCD_Goto(uint8_t row, uint8_t col);

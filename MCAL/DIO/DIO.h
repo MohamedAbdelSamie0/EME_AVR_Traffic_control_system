@@ -9,12 +9,11 @@
 #ifndef DIO_H_
 #define DIO_H_
 
-#define  F_CPU		16000000UL
+
 #include <stdint.h>
 #include "BitMath.h"
 //#include <avr/io.h>
 #include "Atmega32_Registers.h"
-#include <util/delay.h>
 
 typedef enum
 {

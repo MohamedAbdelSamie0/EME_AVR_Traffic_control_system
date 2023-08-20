@@ -8,7 +8,6 @@
 #include "APP.h"
 
 uint8_t state = green_state;
-uint8_t *LCD_Data = "Cars"; 
 
 int main(void)
 {
@@ -18,13 +17,8 @@ int main(void)
 	LCD_Clear();
 	state = green_state;
 
+	PedestrianButton_init();	
 	
-	PedestrianButton_init();
-	//LCD_moveCursor(1, 0);
-	
-    while (1) 
-    {
-		Traffic_state(&state);
-	}
+	Traffic_state(&state);
 }
 

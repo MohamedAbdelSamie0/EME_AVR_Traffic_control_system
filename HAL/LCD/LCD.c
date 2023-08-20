@@ -1,16 +1,12 @@
 /*
  * LCD.c
  *
- * Created: 18-Aug-23 10:32:12 AM
- *  Author: Salma
+ * Created: 8/20/2023 11:20:18 AM
+ *  Author: DELL
  */ 
 #include "LCD.h"
-
-#define F_CPU 8000000UL
+#define  F_CPU			16000000UL
 #include <util/delay.h>
-
-/*HDD44780 datasheet*/
-/*https://www.8051projects.net/lcd-interfacing/commands.php*/
 
 void LCD_Init(void)
 {
@@ -129,12 +125,12 @@ void LCD_WriteChar(uint8_t chr)
 
 void LCD_WriteString(uint8_t* str)
 {
-    uint8_t i = 0;
+    //uint8_t i = 0;
     
-    while(str[i] != '\0')
+    while(*str)
     {
-        LCD_WriteChar(str[i]);
-        i++;
+        LCD_WriteChar(*str++);
+        //i++;
     }
 }
 

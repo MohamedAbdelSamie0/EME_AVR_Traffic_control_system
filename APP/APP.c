@@ -20,6 +20,7 @@ void delay_5secs(uint32_t delay)
 	   }
 }
 
+/*Function to blink yellow led	*/
 void YellowBlink(){
 	int count = 5;
 	while(--count){
@@ -29,43 +30,47 @@ void YellowBlink(){
 	YELLOW_LED(OFF);
 }
 
+
 void Traffic_state(uint8_t *tr_state)
 {
-	switch(*tr_state)
+	while(1)
 	{
-		case green_state:
-		LCD_Clear();
-		LCD_WriteString("	CAR");
-		g_BREAK_DELAY = 1;
-		GREEN_LED(ON);
-		delay_5secs(FIVE_SEC);
-		GREEN_LED(OFF);
-		BLUE_LED(OFF);
-		if(g_BREAK_DELAY)
-			*tr_state = yellow_state;
-		else
-		*tr_state = green_state;
-		break;
+		switch(*tr_state)
+		{
+			case green_state:
+
+			g_BREAK_DELAY = 1;
+			GREEN_LED(ON);
+			delay_5secs(FIVE_SEC);
+			GREEN_LED(OFF);
+			BLUE_LED(OFF);
+			if(g_BREAK_DELAY)
+				*tr_state = yellow_state;
+			else
+				*tr_state = green_state;
+			break;
 		
-		case yellow_state:
-		g_BREAK_DELAY = 1;
-		YellowBlink();
-		BLUE_LED(OFF);
-		if(*tr_state == yellow_state)
-			*tr_state = red_state;
-		else
+			case yellow_state:
+			g_BREAK_DELAY = 1;
+			YellowBlink();
+			BLUE_LED(OFF);
+			if(*tr_state == yellow_state)
+				*tr_state = red_state;
+			else
+				*tr_state = green_state;
+			break;
+		
+			case red_state:
+			g_BREAK_DELAY = 1;
+		
+			RED_LED(ON);
+			BLUE_LED(ON);
+			delay_5secs(FIVE_SEC);
+			RED_LED(OFF);
+			BLUE_LED(OFF);
 			*tr_state = green_state;
-		break;
-		
-		case red_state:
-		g_BREAK_DELAY = 1;
-		
-		RED_LED(ON);
-		delay_5secs(FIVE_SEC);
-		RED_LED(OFF);
-		BLUE_LED(OFF);
-		*tr_state = green_state;
-		break;
+			break;
+		}
 	}
 		
 }
