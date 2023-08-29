@@ -7,18 +7,17 @@
 
 #include "APP.h"
 
-uint8_t state = green_state;
-
 int main(void)
 {
 	
 	LED_init();
 	LCD_Init();
 	LCD_Clear();
-	state = green_state;
+	LCD_Goto(2, 5);
+	LCD_WriteString((uint8_t*)"CARS        ");
 
 	PedestrianButton_init();	
 	
-	Traffic_state(&state);
+	Traffic_state();
 }
 

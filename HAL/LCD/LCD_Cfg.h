@@ -2,7 +2,7 @@
  * LCD_Cfg.h
  *
  * Created: 18-Aug-23 10:22:36 AM
- *  Author: Salma
+ *  Author: Mohamed Abdelsamie
  */ 
 
 
@@ -13,16 +13,23 @@
 
 #define LCD_MODE	4
 
- /*
-    Sets interface data length (DL), number of display lines (N), and character font (F).
-    DL = 1: 8 bits, DL = 0: 4 bits
-    N = 1: 2 lines, N = 0: 1 line
-    F = 1: 5 × 10 dots, F = 0: 5 × 8 dots
-*/
-#define FUNCTION_SET			   0x28
-#define CLEAR_DISPLAY			   0x01
-#define DISPLAY_ON_CURSOR_BLINKING 0x0F
+/* LCD Commands */
+#define FUNCTION_SET						0x28
+#define CLEAR_DISPLAY						0x01
+#define DISPLAY_ON_CURSOR_BLINKING			0x0F
 
+#define LCD_GO_TO_HOME                      0x02
+#define LCD_TWO_LINES_EIGHT_BITS_MODE       0x38
+#define LCD_TWO_LINES_FOUR_BITS_MODE        0x28
+#define LCD_TWO_LINES_FOUR_BITS_MODE_INIT1  0x33
+#define LCD_TWO_LINES_FOUR_BITS_MODE_INIT2  0x32
+#define LCD_CURSOR_OFF                      0x0C
+#define LCD_CURSOR_ON                       0x0E
+#define LCD_BEGIN_AT_FIRST_ROW			 	0x80
+#define LCD_BEGIN_AT_SECOND_ROW				0xc0
+#define LCD_BEGIN_AT_THIRD_ROW				0x94
+#define LCD_BEGIN_AT_FOURTH_ROW				0xE0
+#define LCD_SET_CURSOR_LOCATION             0x80
 
 #define LCD_4BIT_CMD_PORT	 DIO_PORTA  
 #define LCD_4BIT_DATA_PORT	 DIO_PORTB  

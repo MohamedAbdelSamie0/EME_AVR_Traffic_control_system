@@ -14,7 +14,7 @@
 EXTi_INTERRUPTconfiguration *EXTI_Config;
 
 extern uint8_t g_BREAK_DELAY;
-extern uint8_t state;
+extern uint8_t traffic_light_state;
 
 void PedestrianButton_init(){
 	DIO_setPinDirection(PEDESTRIAN_PORT, PEDESTRIAN_PIN, DIO_PIN_INPUT);
@@ -29,15 +29,18 @@ void PedestrianButton_init(){
 
 ISR(INT1_vect){
 	
-	switch(state)
+	/*	clear interrupt flah	*/
+	SetBit(GIFR, EXTI_Config->Flag_clear);
+
+	switch(traffic_light_state)
 	{
 		default:
 		
-		state = green_state;
+		traffic_light_state = green_state;
 		GREEN_LED(OFF);
 		YellowBlink();
-		LCD_Clear();
-		LCD_WriteString((uint8_t*)"PEDESTRIAN");
+		LCD_Goto(2, 5);
+		LCD_WriteString((uint8_t*)"PEDESTRAIN");
 		BLUE_LED(ON);
 		RED_LED(ON);
 		_delay_ms(5000);
@@ -47,18 +50,16 @@ ISR(INT1_vect){
 		
 		case red_state:
 	
-		state = green_state;
-		LCD_Clear();
-		LCD_WriteString((uint8_t*)"PEDESTRIAN");
+		traffic_light_state = green_state;
+		
 		BLUE_LED(ON);
 		_delay_ms(5000);
 		break;
 	}
-	LCD_Clear();
-	g_BREAK_DELAY = 0;
 		
-	/*	clear interrupt flah	*/
-	SetBit(GIFR, EXTI_Config->Flag_clear);
+	LCD_Goto(2, 5);
+	LCD_WriteString((uint8_t*)"CAR         ");
 	
+	g_BREAK_DELAY = 0;	
 }
 

@@ -8,7 +8,8 @@
 
 #include "APP.h"
 
-uint8_t g_BREAK_DELAY = 1; 
+uint8_t g_BREAK_DELAY = 1;
+uint8_t traffic_light_state = green_state;
 
 void delay_5secs(uint32_t delay)
 {
@@ -31,11 +32,11 @@ void YellowBlink(){
 }
 
 
-void Traffic_state(uint8_t *tr_state)
+void Traffic_state()
 {
 	while(1)
 	{
-		switch(*tr_state)
+		switch(traffic_light_state)
 		{
 			case green_state:
 
@@ -45,19 +46,19 @@ void Traffic_state(uint8_t *tr_state)
 			GREEN_LED(OFF);
 			BLUE_LED(OFF);
 			if(g_BREAK_DELAY)
-				*tr_state = yellow_state;
+				traffic_light_state = yellow_state;
 			else
-				*tr_state = green_state;
+				traffic_light_state = green_state;
 			break;
 		
 			case yellow_state:
 			g_BREAK_DELAY = 1;
 			YellowBlink();
 			BLUE_LED(OFF);
-			if(*tr_state == yellow_state)
-				*tr_state = red_state;
+			if(traffic_light_state == yellow_state)
+				traffic_light_state = red_state;
 			else
-				*tr_state = green_state;
+				traffic_light_state = green_state;
 			break;
 		
 			case red_state:
@@ -68,7 +69,7 @@ void Traffic_state(uint8_t *tr_state)
 			delay_5secs(FIVE_SEC);
 			RED_LED(OFF);
 			BLUE_LED(OFF);
-			*tr_state = green_state;
+			traffic_light_state = green_state;
 			break;
 		}
 	}

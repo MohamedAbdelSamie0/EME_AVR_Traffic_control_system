@@ -6,6 +6,12 @@ d:/eme_embedded_eui/ides/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/
                               APP/APP.o (__do_copy_data)
 d:/eme_embedded_eui/ides/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
                               HAL/BUTTON/Button.o (__do_clear_bss)
+d:/eme_embedded_eui/ides/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(ltoa_ncheck.o)
+                              HAL/LCD/LCD.o (__ltoa_ncheck)
+d:/eme_embedded_eui/ides/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(ultoa_ncheck.o)
+                              d:/eme_embedded_eui/ides/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(ltoa_ncheck.o) (__ultoa_common)
+d:/eme_embedded_eui/ides/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strrev.o)
+                              d:/eme_embedded_eui/ides/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(ultoa_ncheck.o) (strrev)
 
 Allocating common symbols
 Common symbol       size              file
@@ -25,8 +31,8 @@ Discarded input sections
  .text          0x00000000        0x0 HAL/LCD/LCD.o
  .data          0x00000000        0x0 HAL/LCD/LCD.o
  .bss           0x00000000        0x0 HAL/LCD/LCD.o
- .text.LCD_Goto
-                0x00000000       0x30 HAL/LCD/LCD.o
+ .text.LCD_intgerToString
+                0x00000000       0x3a HAL/LCD/LCD.o
  .text          0x00000000        0x0 HAL/LED/LED.o
  .data          0x00000000        0x0 HAL/LED/LED.o
  .bss           0x00000000        0x0 HAL/LED/LED.o
@@ -95,6 +101,21 @@ Discarded input sections
                 0x00000000        0x0 d:/eme_embedded_eui/ides/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
  .text.libgcc.fixed
                 0x00000000        0x0 d:/eme_embedded_eui/ides/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
+ .text          0x00000000        0x0 d:/eme_embedded_eui/ides/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(ltoa_ncheck.o)
+ .data          0x00000000        0x0 d:/eme_embedded_eui/ides/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(ltoa_ncheck.o)
+ .bss           0x00000000        0x0 d:/eme_embedded_eui/ides/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(ltoa_ncheck.o)
+ .text.avr-libc
+                0x00000000       0x1e d:/eme_embedded_eui/ides/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(ltoa_ncheck.o)
+ .text          0x00000000        0x0 d:/eme_embedded_eui/ides/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(ultoa_ncheck.o)
+ .data          0x00000000        0x0 d:/eme_embedded_eui/ides/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(ultoa_ncheck.o)
+ .bss           0x00000000        0x0 d:/eme_embedded_eui/ides/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(ultoa_ncheck.o)
+ .text.avr-libc
+                0x00000000       0x44 d:/eme_embedded_eui/ides/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(ultoa_ncheck.o)
+ .text          0x00000000        0x0 d:/eme_embedded_eui/ides/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strrev.o)
+ .data          0x00000000        0x0 d:/eme_embedded_eui/ides/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strrev.o)
+ .bss           0x00000000        0x0 d:/eme_embedded_eui/ides/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strrev.o)
+ .text.avr-libc
+                0x00000000       0x20 d:/eme_embedded_eui/ides/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strrev.o)
 
 Memory Configuration
 
@@ -227,7 +248,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0x870
+.text           0x00000000      0x8be
  *(.vectors)
  .vectors       0x00000000       0x54 D:/EME_Embedded_EUI/IDEs/Atmel/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
                 0x00000000                __vector_default
@@ -315,62 +336,65 @@ END GROUP
                 0x000000d4       0x2c APP/APP.o
                 0x000000d4                YellowBlink
  .text.Traffic_state
-                0x00000100       0x96 APP/APP.o
+                0x00000100       0xa2 APP/APP.o
                 0x00000100                Traffic_state
  .text.PedestrianButton_init
-                0x00000196       0x36 HAL/BUTTON/Button.o
-                0x00000196                PedestrianButton_init
+                0x000001a2       0x36 HAL/BUTTON/Button.o
+                0x000001a2                PedestrianButton_init
  .text.__vector_2
-                0x000001cc       0xe4 HAL/BUTTON/Button.o
-                0x000001cc                __vector_2
+                0x000001d8       0xe8 HAL/BUTTON/Button.o
+                0x000001d8                __vector_2
  .text.LCD_WriteCommand
-                0x000002b0       0xfe HAL/LCD/LCD.o
-                0x000002b0                LCD_WriteCommand
+                0x000002c0       0xfe HAL/LCD/LCD.o
+                0x000002c0                LCD_WriteCommand
  .text.LCD_Init
-                0x000003ae       0x80 HAL/LCD/LCD.o
-                0x000003ae                LCD_Init
+                0x000003be       0x80 HAL/LCD/LCD.o
+                0x000003be                LCD_Init
  .text.LCD_WriteChar
-                0x0000042e       0xfe HAL/LCD/LCD.o
-                0x0000042e                LCD_WriteChar
+                0x0000043e       0xfe HAL/LCD/LCD.o
+                0x0000043e                LCD_WriteChar
  .text.LCD_WriteString
-                0x0000052c       0x1a HAL/LCD/LCD.o
-                0x0000052c                LCD_WriteString
+                0x0000053c       0x26 HAL/LCD/LCD.o
+                0x0000053c                LCD_WriteString
+ .text.LCD_Goto
+                0x00000562       0x2c HAL/LCD/LCD.o
+                0x00000562                LCD_Goto
  .text.LCD_Clear
-                0x00000546        0x8 HAL/LCD/LCD.o
-                0x00000546                LCD_Clear
+                0x0000058e        0x8 HAL/LCD/LCD.o
+                0x0000058e                LCD_Clear
  .text.LED_init
-                0x0000054e       0x52 HAL/LED/LED.o
-                0x0000054e                LED_init
- .text.RED_LED  0x000005a0       0x1e HAL/LED/LED.o
-                0x000005a0                RED_LED
+                0x00000596       0x52 HAL/LED/LED.o
+                0x00000596                LED_init
+ .text.RED_LED  0x000005e8       0x1e HAL/LED/LED.o
+                0x000005e8                RED_LED
  .text.YELLOW_LED
-                0x000005be       0x1e HAL/LED/LED.o
-                0x000005be                YELLOW_LED
+                0x00000606       0x1e HAL/LED/LED.o
+                0x00000606                YELLOW_LED
  .text.GREEN_LED
-                0x000005dc       0x20 HAL/LED/LED.o
-                0x000005dc                GREEN_LED
+                0x00000624       0x20 HAL/LED/LED.o
+                0x00000624                GREEN_LED
  .text.BLUE_LED
-                0x000005fc       0x20 HAL/LED/LED.o
-                0x000005fc                BLUE_LED
- .text.main     0x0000061c       0x24 main.o
-                0x0000061c                main
+                0x00000644       0x20 HAL/LED/LED.o
+                0x00000644                BLUE_LED
+ .text.main     0x00000664       0x2a main.o
+                0x00000664                main
  .text.DIO_setPinDirection
-                0x00000640       0xe0 MCAL/DIO/DIO.o
-                0x00000640                DIO_setPinDirection
+                0x0000068e       0xe0 MCAL/DIO/DIO.o
+                0x0000068e                DIO_setPinDirection
  .text.DIO_WritePin
-                0x00000720       0xdc MCAL/DIO/DIO.o
-                0x00000720                DIO_WritePin
+                0x0000076e       0xdc MCAL/DIO/DIO.o
+                0x0000076e                DIO_WritePin
  .text.EXTI_GlobalSet
-                0x000007fc        0x8 MCAL/EXTI/interrupts.o
-                0x000007fc                EXTI_GlobalSet
+                0x0000084a        0x8 MCAL/EXTI/interrupts.o
+                0x0000084a                EXTI_GlobalSet
  .text.EXTI_interruptconfig
-                0x00000804       0x68 MCAL/EXTI/interrupts.o
-                0x00000804                EXTI_interruptconfig
-                0x0000086c                . = ALIGN (0x2)
+                0x00000852       0x68 MCAL/EXTI/interrupts.o
+                0x00000852                EXTI_interruptconfig
+                0x000008ba                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x0000086c        0x0 d:/eme_embedded_eui/ides/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
-                0x0000086c                _exit
-                0x0000086c                exit
+ .fini9         0x000008ba        0x0 d:/eme_embedded_eui/ides/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+                0x000008ba                _exit
+                0x000008ba                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -389,46 +413,49 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x0000086c        0x4 d:/eme_embedded_eui/ides/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .fini0         0x000008ba        0x4 d:/eme_embedded_eui/ides/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00000870                _etext = .
+                0x000008be                _etext = .
 
-.data           0x00800060        0xe load address 0x00000870
+.data           0x00800060       0x28 load address 0x000008be
                 0x00800060                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
- .data.g_BREAK_DELAY
+ .data.traffic_light_state
                 0x00800060        0x1 APP/APP.o
-                0x00800060                g_BREAK_DELAY
- .data.state    0x00800061        0x1 main.o
-                0x00800061                state
+                0x00800060                traffic_light_state
+ .data.g_BREAK_DELAY
+                0x00800061        0x1 APP/APP.o
+                0x00800061                g_BREAK_DELAY
  *(.gnu.linkonce.d*)
  *(.rodata)
  *(.rodata*)
  .rodata.str1.1
-                0x00800062        0xb HAL/BUTTON/Button.o
+                0x00800062       0x18 HAL/BUTTON/Button.o
+ .rodata.str1.1
+                0x0080007a        0xd main.o
  *(.gnu.linkonce.r*)
-                0x0080006e                . = ALIGN (0x2)
- *fill*         0x0080006d        0x1 
-                0x0080006e                _edata = .
-                0x0080006e                PROVIDE (__data_end, .)
+                0x00800088                . = ALIGN (0x2)
+ *fill*         0x00800087        0x1 
+                0x00800088                _edata = .
+                0x00800088                PROVIDE (__data_end, .)
 
-.bss            0x0080006e        0x2
-                0x0080006e                PROVIDE (__bss_start, .)
+.bss            0x00800088        0x2
+                0x00800088                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
  *(COMMON)
- COMMON         0x0080006e        0x2 HAL/BUTTON/Button.o
-                0x0080006e                EXTI_Config
-                0x00800070                PROVIDE (__bss_end, .)
-                0x00000870                __data_load_start = LOADADDR (.data)
-                0x0000087e                __data_load_end = (__data_load_start + SIZEOF (.data))
+ COMMON         0x00800088        0x2 HAL/BUTTON/Button.o
+                0x00800088                EXTI_Config
+                0x0080008a                PROVIDE (__bss_end, .)
+                0x000008be                __data_load_start = LOADADDR (.data)
+                0x000008e6                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x00800070        0x0
+.noinit         0x0080008a        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
  *(.noinit*)
                 [!provide]                PROVIDE (__noinit_end, .)
-                0x00800070                _end = .
+                0x0080008a                _end = .
                 [!provide]                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
@@ -499,95 +526,95 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000      0x170
+.debug_aranges  0x00000000      0x178
  *(.debug_aranges)
  .debug_aranges
                 0x00000000       0x30 APP/APP.o
  .debug_aranges
                 0x00000030       0x28 HAL/BUTTON/Button.o
  .debug_aranges
-                0x00000058       0x48 HAL/LCD/LCD.o
+                0x00000058       0x50 HAL/LCD/LCD.o
  .debug_aranges
-                0x000000a0       0x40 HAL/LED/LED.o
+                0x000000a8       0x40 HAL/LED/LED.o
  .debug_aranges
-                0x000000e0       0x20 main.o
+                0x000000e8       0x20 main.o
  .debug_aranges
-                0x00000100       0x48 MCAL/DIO/DIO.o
+                0x00000108       0x48 MCAL/DIO/DIO.o
  .debug_aranges
-                0x00000148       0x28 MCAL/EXTI/interrupts.o
+                0x00000150       0x28 MCAL/EXTI/interrupts.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x1ce6
+.debug_info     0x00000000     0x1e69
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x4e6 D:/EME_Embedded_EUI/IDEs/Atmel/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
- .debug_info    0x000004e6      0x2fb APP/APP.o
- .debug_info    0x000007e1      0x393 HAL/BUTTON/Button.o
- .debug_info    0x00000b74      0xa25 HAL/LCD/LCD.o
- .debug_info    0x00001599      0x2ea HAL/LED/LED.o
- .debug_info    0x00001883      0x11b main.o
- .debug_info    0x0000199e      0x1e6 MCAL/DIO/DIO.o
- .debug_info    0x00001b84      0x162 MCAL/EXTI/interrupts.o
+ .debug_info    0x000004e6      0x2f7 APP/APP.o
+ .debug_info    0x000007dd      0x3a4 HAL/BUTTON/Button.o
+ .debug_info    0x00000b81      0xb6e HAL/LCD/LCD.o
+ .debug_info    0x000016ef      0x2ea HAL/LED/LED.o
+ .debug_info    0x000019d9      0x148 main.o
+ .debug_info    0x00001b21      0x1e6 MCAL/DIO/DIO.o
+ .debug_info    0x00001d07      0x162 MCAL/EXTI/interrupts.o
 
-.debug_abbrev   0x00000000      0xb7d
+.debug_abbrev   0x00000000      0xc15
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x4a3 D:/EME_Embedded_EUI/IDEs/Atmel/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
- .debug_abbrev  0x000004a3      0x176 APP/APP.o
- .debug_abbrev  0x00000619      0x168 HAL/BUTTON/Button.o
- .debug_abbrev  0x00000781      0x14f HAL/LCD/LCD.o
- .debug_abbrev  0x000008d0       0xb0 HAL/LED/LED.o
- .debug_abbrev  0x00000980       0x9a main.o
- .debug_abbrev  0x00000a1a       0xa1 MCAL/DIO/DIO.o
- .debug_abbrev  0x00000abb       0xc2 MCAL/EXTI/interrupts.o
+ .debug_abbrev  0x000004a3      0x16b APP/APP.o
+ .debug_abbrev  0x0000060e      0x173 HAL/BUTTON/Button.o
+ .debug_abbrev  0x00000781      0x1f6 HAL/LCD/LCD.o
+ .debug_abbrev  0x00000977       0xb0 HAL/LED/LED.o
+ .debug_abbrev  0x00000a27       0x8b main.o
+ .debug_abbrev  0x00000ab2       0xa1 MCAL/DIO/DIO.o
+ .debug_abbrev  0x00000b53       0xc2 MCAL/EXTI/interrupts.o
 
-.debug_line     0x00000000      0xec6
+.debug_line     0x00000000      0xf21
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x116 D:/EME_Embedded_EUI/IDEs/Atmel/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
  .debug_line    0x00000116      0x214 APP/APP.o
- .debug_line    0x0000032a      0x22a HAL/BUTTON/Button.o
- .debug_line    0x00000554      0x347 HAL/LCD/LCD.o
- .debug_line    0x0000089b      0x180 HAL/LED/LED.o
- .debug_line    0x00000a1b      0x112 main.o
- .debug_line    0x00000b2d      0x28d MCAL/DIO/DIO.o
- .debug_line    0x00000dba      0x10c MCAL/EXTI/interrupts.o
+ .debug_line    0x0000032a      0x224 HAL/BUTTON/Button.o
+ .debug_line    0x0000054e      0x3a2 HAL/LCD/LCD.o
+ .debug_line    0x000008f0      0x180 HAL/LED/LED.o
+ .debug_line    0x00000a70      0x118 main.o
+ .debug_line    0x00000b88      0x28d MCAL/DIO/DIO.o
+ .debug_line    0x00000e15      0x10c MCAL/EXTI/interrupts.o
 
-.debug_frame    0x00000000      0x2bc
+.debug_frame    0x00000000      0x2d0
  *(.debug_frame)
  .debug_frame   0x00000000       0x64 APP/APP.o
  .debug_frame   0x00000064       0x7c HAL/BUTTON/Button.o
- .debug_frame   0x000000e0       0xa0 HAL/LCD/LCD.o
- .debug_frame   0x00000180       0x64 HAL/LED/LED.o
- .debug_frame   0x000001e4       0x24 main.o
- .debug_frame   0x00000208       0x74 MCAL/DIO/DIO.o
- .debug_frame   0x0000027c       0x40 MCAL/EXTI/interrupts.o
+ .debug_frame   0x000000e0       0xb4 HAL/LCD/LCD.o
+ .debug_frame   0x00000194       0x64 HAL/LED/LED.o
+ .debug_frame   0x000001f8       0x24 main.o
+ .debug_frame   0x0000021c       0x74 MCAL/DIO/DIO.o
+ .debug_frame   0x00000290       0x40 MCAL/EXTI/interrupts.o
 
-.debug_str      0x00000000      0x5fd
+.debug_str      0x00000000      0x669
  *(.debug_str)
  .debug_str     0x00000000      0x196 D:/EME_Embedded_EUI/IDEs/Atmel/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
- .debug_str     0x00000196      0x20e APP/APP.o
-                                0x242 (size before relaxing)
- .debug_str     0x000003a4      0x151 HAL/BUTTON/Button.o
-                                0x33a (size before relaxing)
- .debug_str     0x000004f5       0x58 HAL/LCD/LCD.o
-                                0x243 (size before relaxing)
- .debug_str     0x0000054d       0x1a HAL/LED/LED.o
+ .debug_str     0x00000196      0x219 APP/APP.o
+                                0x24d (size before relaxing)
+ .debug_str     0x000003af      0x150 HAL/BUTTON/Button.o
+                                0x347 (size before relaxing)
+ .debug_str     0x000004ff       0xba HAL/LCD/LCD.o
+                                0x2ae (size before relaxing)
+ .debug_str     0x000005b9       0x1a HAL/LED/LED.o
                                 0x1d9 (size before relaxing)
- .debug_str     0x00000567       0x11 main.o
-                                0x1c9 (size before relaxing)
- .debug_str     0x00000578       0x4e MCAL/DIO/DIO.o
+ .debug_str     0x000005d3       0x11 main.o
+                                0x1dc (size before relaxing)
+ .debug_str     0x000005e4       0x4e MCAL/DIO/DIO.o
                                 0x1e6 (size before relaxing)
- .debug_str     0x000005c6       0x37 MCAL/EXTI/interrupts.o
+ .debug_str     0x00000632       0x37 MCAL/EXTI/interrupts.o
                                 0x279 (size before relaxing)
 
-.debug_loc      0x00000000      0xd0d
+.debug_loc      0x00000000      0xe35
  *(.debug_loc)
- .debug_loc     0x00000000      0x180 APP/APP.o
- .debug_loc     0x00000180      0x15b HAL/BUTTON/Button.o
- .debug_loc     0x000002db      0x66d HAL/LCD/LCD.o
- .debug_loc     0x00000948       0xe8 HAL/LED/LED.o
- .debug_loc     0x00000a30      0x278 MCAL/DIO/DIO.o
- .debug_loc     0x00000ca8       0x65 MCAL/EXTI/interrupts.o
+ .debug_loc     0x00000000      0x158 APP/APP.o
+ .debug_loc     0x00000158      0x15b HAL/BUTTON/Button.o
+ .debug_loc     0x000002b3      0x7bd HAL/LCD/LCD.o
+ .debug_loc     0x00000a70       0xe8 HAL/LED/LED.o
+ .debug_loc     0x00000b58      0x278 MCAL/DIO/DIO.o
+ .debug_loc     0x00000dd0       0x65 MCAL/EXTI/interrupts.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -607,15 +634,15 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x00000000      0x100
+.debug_ranges   0x00000000      0x108
  *(.debug_ranges)
  .debug_ranges  0x00000000       0x20 APP/APP.o
  .debug_ranges  0x00000020       0x18 HAL/BUTTON/Button.o
- .debug_ranges  0x00000038       0x38 HAL/LCD/LCD.o
- .debug_ranges  0x00000070       0x30 HAL/LED/LED.o
- .debug_ranges  0x000000a0       0x10 main.o
- .debug_ranges  0x000000b0       0x38 MCAL/DIO/DIO.o
- .debug_ranges  0x000000e8       0x18 MCAL/EXTI/interrupts.o
+ .debug_ranges  0x00000038       0x40 HAL/LCD/LCD.o
+ .debug_ranges  0x00000078       0x30 HAL/LED/LED.o
+ .debug_ranges  0x000000a8       0x10 main.o
+ .debug_ranges  0x000000b8       0x38 MCAL/DIO/DIO.o
+ .debug_ranges  0x000000f0       0x18 MCAL/EXTI/interrupts.o
 
 .debug_macro
  *(.debug_macro)

@@ -24,5 +24,5 @@
 void RED_STATE();
 
 void delay_5secs(uint32_t delay);
-void Traffic_state(uint8_t *tr_state);
+void Traffic_state();
 void YellowBlink();

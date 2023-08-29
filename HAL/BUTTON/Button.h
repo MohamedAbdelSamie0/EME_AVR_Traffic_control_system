@@ -10,7 +10,11 @@
 #define BUTTON_H_
 
 #include "Button_Config.h"
-#define F_CPU	16000000UL
+
+#ifndef F_CPU
+	#define  F_CPU			16000000UL
+#endif
+
 #include <util/delay.h>
 
 enum states{
